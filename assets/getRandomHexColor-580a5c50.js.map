@@ -1,0 +1,1 @@
+{"version":3,"file":"getRandomHexColor-580a5c50.js","sources":["../../src/js/getRandomHexColor.js"],"sourcesContent":["export function getRandomHexColor() {\n  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;\n}\n"],"names":["getRandomHexColor"],"mappings":"AAAO,SAASA,GAAoB,CAClC,MAAO,IAAI,KAAK,MAAM,KAAK,SAAW,QAAQ,EAAE,SAAS,EAAE,CAAC,EAC9D"}
