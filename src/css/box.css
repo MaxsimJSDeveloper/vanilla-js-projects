@@ -1,0 +1,39 @@
+.form {
+  border-radius: 8px;
+  padding: 32px;
+  width: 486px;
+  background-color: #f6f6fe;
+  margin-bottom: 16px;
+}
+
+.number-element {
+  border: 1px solid #808080;
+  border-radius: 8px;
+  padding: 8px;
+  width: 150px;
+}
+
+.btn {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 120px;
+  background-color: #4e75ff;
+  font-weight: 500;
+  color: #fff;
+}
+
+.destroy-btn {
+  background-color: #ff4e4e;
+}
+
+.box-size {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.item {
+  border-radius: 8px;
+  margin-bottom: 24px;
+}

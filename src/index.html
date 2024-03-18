@@ -4,21 +4,22 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <title>Projects</title>
   </head>
   <body>
-    <load ="partials/header.html" />
-
-    <section>
-      <h1>Example page title</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="./img/javascript.svg" alt="" />
-    </section>
-
-    <!-- Loads the specified .html file -->
-    <load ="partials/vite-promo.html" />
-
-    <script type="module" src="./main.js"></script>
+    <header class="header">
+      <ul class="nav-list">
+        <li class="nav-btn">
+          <a href="./form.html"><p class="nav-text">Form</p></a>
+        </li>
+        <li class="nav-btn">
+          <a href="./bg-color.html"><p class="nav-text">Colors</p></a>
+        </li>
+        <li class="nav-btn">
+          <a href="./create-box.html"><p class="nav-text">Boxes</p></a>
+        </li>
+      </ul>
+    </header>
   </body>
 </html>

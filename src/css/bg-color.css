@@ -1,0 +1,17 @@
+.widget {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.change-color {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 148px;
+  height: 40px;
+  background-color: #4e75ff;
+  font-weight: 500;
+  color: #fff;
+  margin: 0 auto;
+}
