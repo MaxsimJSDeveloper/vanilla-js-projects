@@ -4,26 +4,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Task 6</title>
+    <title>Boxes</title>
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/box.css" />
-    <script src="./js/task-6.js" type="module"></script>
+    <script src="./js/boxes.js" type="module"></script>
   </head>
   <body>
-    <div class="text-container">
-      <p><a href="./index.html">Go back</a></p>
-    </div>
+    <header>
+      <div class="text-container">
+        <p><a href="./index.html">Go back</a></p>
+      </div>
+    </header>
+    <main>
+      <div class="form" id="controls">
+        <input
+          class="number-element"
+          type="number"
+          min="1"
+          max="100"
+          step="1"
+        />
+        <button class="create-btn btn" type="button" data-create="create">
+          Create
+        </button>
+        <button class="destroy-btn btn" type="button" data-destroy="destroy">
+          Destroy
+        </button>
+      </div>
 
-    <div class="form" id="controls">
-      <input class="number-element" type="number" min="1" max="100" step="1" />
-      <button class="create-btn btn" type="button" data-create="create">
-        Create
-      </button>
-      <button class="destroy-btn btn" type="button" data-destroy="destroy">
-        Destroy
-      </button>
-    </div>
-
-    <div class="element-box" id="boxes"></div>
+      <div class="element-box" id="boxes"></div>
+    </main>
   </body>
 </html>

@@ -9,5 +9,4 @@ function changeColor() {
   const color = getRandomHexColor();
   document.body.style.backgroundColor = color;
   span.innerText = color;
-  console.log(color);
 }
