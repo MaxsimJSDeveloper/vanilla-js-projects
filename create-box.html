@@ -4,31 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Task 6</title>
+    <title>Boxes</title>
     
     
     
-    <script type="module" crossorigin src="/js-pet-projects/commonHelpers2.js"></script>
+    <script type="module" crossorigin src="/js-pet-projects/commonHelpers4.js"></script>
     <link rel="modulepreload" crossorigin href="/js-pet-projects/assets/modulepreload-polyfill-3cfb730f.js">
     <link rel="modulepreload" crossorigin href="/js-pet-projects/assets/getRandomHexColor-580a5c50.js">
     <link rel="stylesheet" href="/js-pet-projects/assets/create-box-f9b139f4.css">
-    <link rel="stylesheet" href="/js-pet-projects/assets/common-1b9c1bde.css">
+    <link rel="stylesheet" href="/js-pet-projects/assets/common-b7cbfc04.css">
   </head>
   <body>
-    <div class="text-container">
-      <p><a href="./index.html">Go back</a></p>
-    </div>
+    <header>
+      <div class="text-container">
+        <p><a href="./index.html">Go back</a></p>
+      </div>
+    </header>
+    <main>
+      <div class="form" id="controls">
+        <input
+          class="number-element"
+          type="number"
+          min="1"
+          max="100"
+          step="1"
+        />
+        <button class="create-btn btn" type="button" data-create="create">
+          Create
+        </button>
+        <button class="destroy-btn btn" type="button" data-destroy="destroy">
+          Destroy
+        </button>
+      </div>
 
-    <div class="form" id="controls">
-      <input class="number-element" type="number" min="1" max="100" step="1" />
-      <button class="create-btn btn" type="button" data-create="create">
-        Create
-      </button>
-      <button class="destroy-btn btn" type="button" data-destroy="destroy">
-        Destroy
-      </button>
-    </div>
-
-    <div class="element-box" id="boxes"></div>
+      <div class="element-box" id="boxes"></div>
+    </main>
   </body>
 </html>
