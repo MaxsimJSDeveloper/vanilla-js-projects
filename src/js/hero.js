@@ -1,40 +1,54 @@
 import axios from 'axios';
 import iziToast from 'izitoast';
 
+import 'izitoast/dist/css/iziToast.min.css';
+
 const form = document.querySelector('.hero-form');
 const description = document.querySelector('.hero-description');
 
+// Відправка форми
 form.addEventListener('submit', getName);
 
-function getName(event) {
+async function getName(event) {
   event.preventDefault();
-  const name = event.target.elements.hero.value;
+  const name = event.target.elements.hero.value.trim();
 
-  getHero(name).then(data => {
-    console.log(data);
+  try {
+    const data = await getHero(name);
     const markup = createMarkup(data);
     description.insertAdjacentHTML('beforeend', markup);
-  });
+  } catch (error) {
+    console.error('Error fetching hero:', error);
+    iziToast.error({
+      title: 'Error',
+      message:
+        'Failed to fetch hero. Please input correct name, for example (batman).',
+      position: 'topRight',
+    });
+  }
 
   event.target.reset();
 }
 
+// відповідь сервера
 async function getHero(name) {
-  const url = 'https://superhero-search.p.rapidapi.com/api/';
-
-  const response = await axios.get(url, {
-    params: {
-      hero: name,
-    },
-    headers: {
-      'X-RapidAPI-Key': '28088c2f9cmshe017453cff91eb1p1d53fcjsn2e39c72e4ae2',
-      'X-RapidAPI-Host': 'superhero-search.p.rapidapi.com',
-    },
-  });
+  const response = await axios.get(
+    'https://superhero-search.p.rapidapi.com/api/',
+    {
+      params: {
+        hero: name,
+      },
+      headers: {
+        'X-RapidAPI-Key': '28088c2f9cmshe017453cff91eb1p1d53fcjsn2e39c72e4ae2',
+        'X-RapidAPI-Host': 'superhero-search.p.rapidapi.com',
+      },
+    }
+  );
 
   return response.data;
 }
 
+// створення розмітки
 function createMarkup(hero) {
   return `<li class="hero-card card">
   <div class="image-container">
