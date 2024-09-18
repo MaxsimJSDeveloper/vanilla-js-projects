@@ -5,7 +5,7 @@
   "type": "module",
   "main": "vite.config.js",
   "dependencies": {
-    "axios": "^1.7.7",
+    "axios": "^1.6.8",
     "flatpickr": "^4.6.13",
     "izitoast": "^1.4.0",
     "vite-plugin-full-reload": "^1.2.0",
