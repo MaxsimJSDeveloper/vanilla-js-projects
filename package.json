@@ -11,6 +11,11 @@
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-html-inject": "^1.1.2"
   },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --base=/vanilla-js-projects/",
+    "preview": "vite preview"
+  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^26.0.1",
     "glob": "^8.1.0",
